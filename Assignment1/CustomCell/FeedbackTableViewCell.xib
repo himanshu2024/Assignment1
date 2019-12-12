@@ -1,21 +1,101 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13142" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12042"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="FeedbackTableViewCell" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="FeedbackTableViewCell" rowHeight="369" id="KGk-i7-Jjw" customClass="FeedbackTableViewCell" customModule="Assignment1" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="416" height="369"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <rect key="frame" x="0.0" y="0.0" width="416" height="369"/>
                 <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="Q86-Vb-4bj">
+                        <rect key="frame" x="0.0" y="11" width="416" height="358"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Experience?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kVt-K3-hEg">
+                                <rect key="frame" x="161.5" y="0.0" width="93.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="jDH-3j-2ah">
+                                <rect key="frame" x="0.0" y="26.5" width="416" height="50"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="4Kz-g0-bjW"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Fzg-ds-scr">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                            </collectionView>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AEs-Qk-8Wc" customClass="CosmosView" customModule="Cosmos">
+                                <rect key="frame" x="88" y="82.5" width="240" height="142"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="rating">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="totalStars">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="starSize">
+                                        <real key="value" value="28"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="emptyBorderColor">
+                                        <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="emptyColor">
+                                        <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="What can we improved?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pSk-at-98N">
+                                <rect key="frame" x="187.5" y="230.5" width="183" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="ytH-xy-WqD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dCS-sX-5Id">
+                                <rect key="frame" x="108" y="257" width="200" height="101"/>
+                            </stackView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="jDH-3j-2ah" firstAttribute="leading" secondItem="Q86-Vb-4bj" secondAttribute="leading" id="GIc-t9-ZSk"/>
+                            <constraint firstItem="pSk-at-98N" firstAttribute="leading" secondItem="Q86-Vb-4bj" secondAttribute="leading" id="VR5-tj-UFO"/>
+                            <constraint firstAttribute="trailing" secondItem="pSk-at-98N" secondAttribute="trailing" id="fam-cw-Bb1"/>
+                            <constraint firstAttribute="trailing" secondItem="jDH-3j-2ah" secondAttribute="trailing" id="t2a-kN-gcG"/>
+                        </constraints>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="Q86-Vb-4bj" secondAttribute="trailing" id="Mb4-mW-k6Q"/>
+                    <constraint firstAttribute="bottom" secondItem="Q86-Vb-4bj" secondAttribute="bottom" id="hUn-xs-Wwk"/>
+                    <constraint firstItem="Q86-Vb-4bj" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="11" id="hy4-fJ-ogu"/>
+                    <constraint firstItem="Q86-Vb-4bj" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="rjh-nM-Pkn"/>
+                </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="TitleLabel" destination="kVt-K3-hEg" id="93v-QQ-Pfu"/>
+                <outlet property="bottomStackView" destination="dCS-sX-5Id" id="IMs-ke-cEM"/>
+                <outlet property="ratingView" destination="AEs-Qk-8Wc" id="4H5-jU-G8C"/>
+                <outlet property="suggestionLabel" destination="pSk-at-98N" id="eVe-Lc-g9l"/>
+                <outlet property="typeCollectionView" destination="jDH-3j-2ah" id="m7B-cm-hT0"/>
+            </connections>
+            <point key="canvasLocation" x="207.24637681159422" y="262.16517857142856"/>
         </tableViewCell>
     </objects>
 </document>

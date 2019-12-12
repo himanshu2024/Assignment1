@@ -106,7 +106,7 @@ class FeedbackItem: Codable {
     var isMandatory: Bool?
     var classQuestion: String?
     var rateRange: Int?
-    var feedbackType: String?
+    var feedbackType: FeedbackType?
     var rateLevel: [FeedbackItemRateLevel]?
     var textQuestion: String?
     var productData: [ProductDatum]?
@@ -119,6 +119,10 @@ class FeedbackItem: Codable {
         case productData = "product_data"
     }
 
+    enum FeedbackType : String, Codable {
+        case question_with_text
+        case dynamic
+    }
 }
 
 // MARK: - ProductDatum

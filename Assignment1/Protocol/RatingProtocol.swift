@@ -7,3 +7,7 @@
 //
 
 import Foundation
+
+protocol RatingProtocol {
+    func updateTable()
+}
