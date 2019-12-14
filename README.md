@@ -1,5 +1,5 @@
 # IOS Assignment 1
-Licious assignmnet.
+Licious assignment.
 Things to learn :
 ### MVVM
 ReviewRatingViewModel
